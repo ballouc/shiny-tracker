@@ -1,4 +1,4 @@
-# Cam's Shiny Tracker Version 1.0
+# Cam's Shiny Tracker Version 1.1
 A shiny hunting app for Pokemon. Use this to track encounters, check game-dependent shiny rates, and see the odds of encountering at least one shiny at a given number of encounters.
 
 
