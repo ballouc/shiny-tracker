@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="sparkles.png">
+    <title>Pokémon Shiny Tracker</title>
+  </head>
+  <header>
+    <img class="header-img" src="sparkles.png"></img>
+    <div class="header-text">Cam's Shiny Tracker</div>
+  </header>
+  <body>
+    <h1>Encounters</h1>
+    <p id="count-el" onclick="changeCount()">0</p>
+    <!-- onclick is a function of HTML -->
+    <div class="btn-container">
+      <div class="change-btns">
+        <button id="decrement-btn" class="change-btn" onclick="decrement()">-</button>
+        <button id="increment-btn" class="change-btn" onclick="increment()">+</button>
+      </div>
+      <div class="extra-btns">
+        <button id="reset-btn" class="extra-btn" onclick="reset()">RESET</button>
+        <button id="done-btn" class="extra-btn" onclick="done()">DONE</button>
+      </div>
+    </div>
+    <div class="info-container">
+        <div class="stats-container">
+            <div id="static-probabilty" class="static">Probability</div>
+            <div id="probability" class="info-box">1/8192</div>
+        </div>
+        <div class="stats-container">
+            <div id="static-binomial" class="static">B(n,p)</div>
+            <div id="binomial-distribution" class="info-box">0.00%</div>
+        </div>
+        <!-- <div class="stats-container">
+            <div id="static-90" class="static">Until 90%</div>
+            <div id="90" class="info-box">9,431</div>
+        </div> -->
+    </div>
+    <div class="settings">
+        <select name="generations" id="generations" onchange="setValues(this)">
+            <option value="gen3">FRLG / RSE</option>
+            <option value="gen4">DPP / HGSS</option>
+            <option value="gen5">BW / BW2</option>
+            <option value="gen6">XY / ORAS</option>
+            <option value="gen7">SM / USUM</option>
+            <option value="gen8">SWSH</option>
+            <option value="gen9">SV</option>
+        </select>
+        <input type="checkbox" id="shiny-charm" name="shiny-charm">
+        <label for="shiny-charm">Shiny Charm?</label>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
